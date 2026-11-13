@@ -1,6 +1,6 @@
 # Monarca Barber
 
-Site de agendamento para uma barbearia, feito apenas com **HTML, CSS e JavaScript puros** (sem frameworks, sem bibliotecas e sem servidor). Projeto final da disciplina de Front-end.
+Site de agendamento para uma barbearia. Projeto final da disciplina de Front-end.
 
 - **Autor:** Pedro Henrique
 - **Curso:** Ciência da Computação, Unipê (João Pessoa - PB)
@@ -37,8 +37,6 @@ A solução: o site mostra **apenas horários livres** e o cliente agenda na hor
 - Aba **Confirmar**: agendamentos feitos, com código (formato `MB-4821`), botão para confirmar pelo WhatsApp e botão de cancelar (permitido até 2 horas antes).
 - Aba **Concluídos**: atendimentos já realizados, com data, serviços, valor e barbeiro, mais o total de cortes e o total gasto.
 
-**Em construção:** a tela de perfil (`perfil.html`) ainda mostra só o aviso. Também ficaram para uma próxima versão: remarcar, avaliar um atendimento, cartão fidelidade, painel do administrador e idioma PT/EN.
-
 ## Como abrir
 
 1. No VSCode, abra a pasta que contém `HTML`, `CSS`, `JAVASCRIPT` e `IMG` (**File > Open Folder**). Abrir só a pasta `HTML` quebra os caminhos.
@@ -46,8 +44,6 @@ A solução: o site mostra **apenas horários livres** e o cliente agenda na hor
 3. O endereço deve ser `127.0.0.1:5500/HTML/index.html`.
 
 As fontes vêm do Google Fonts, então é preciso internet para elas aparecerem. Sem internet, o site funciona com fontes reserva.
-
-**Usuário de teste:** `demo@monarca.com` · senha `Demo@123`. Ele já vem com 5 atendimentos concluídos. Também dá para criar uma conta nova na aba Cadastrar.
 
 ## Estrutura de pastas
 
@@ -111,13 +107,6 @@ Quase tudo fica em `JAVASCRIPT/dados.js`:
 
 O endereço do rodapé está escrito direto no `index.html`: se mudar o endereço, mude lá também.
 
-## Imagens
-
-Coloque as fotos na pasta `IMG` com estes nomes. Se um arquivo não existir, a moldura da foto fica vazia.
-
-- **Galeria:** `galeria-1.jpg`, `galeria-2.jpg`, `barbeiro-cortando.jpg`, `galeria-3.jpg`, `galeria-4.jpg` e `galeria-5.jpg`
-- **Barbeiros:** `barbeiro-rafael.jpg` e `barbeiro-thiago.jpg`
-- **Serviços:** `corte-social.jpg`, `corte-tesoura.jpg`, `degrade-navalhado.jpg`, `navalhado-total.jpg`, `barba.jpg`, `sobrancelha.jpg`, `combo-social.jpg` e `combo-navalhado.jpg`
 
 ## Limitações
 
@@ -125,7 +114,3 @@ Coloque as fotos na pasta `IMG` com estes nomes. Se um arquivo não existir, a m
 - O login é uma **simulação**: tudo roda no navegador e pode ser visto e alterado por quem abrir as ferramentas do desenvolvedor. Não é segurança real.
 - O selo de "próximo horário livre" da tela inicial considera só o expediente e o almoço, e não os agendamentos já feitos.
 - Nenhum agendamento muda para "concluído" sozinho: sem o painel do administrador, só o usuário de teste tem atendimentos concluídos.
-
-## Créditos das imagens
-
-Preencher com a origem de cada foto (fotos próprias, com autorização, ou bancos gratuitos como Unsplash e Pexels).
