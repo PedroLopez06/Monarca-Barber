@@ -1,0 +1,27 @@
+/* ===== Componentes: peças usadas em várias partes do site ===== */
+
+/* ===== Botão principal: gradientes dourado, borda e brilho ===== */
+
+.bnt{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:0 24px;border: 2px solid var(--dourado-escuro);background:linear-gradient(180deg,#E8C772,#C9A24B);color:#1A1306;font:inherit;font-weight:700;cursor:pointer;text-decoration:none;box-shadow:0 4px 16px rgba(201,162,75,.35);transition:transform .15s,box-shadow .15s}
+/* esse .bnt eu estou configurando praticamente tudo: alinhamento, tamanho, espaçamento, borda, cores, fonte, cursor, sombra e animação. Qlqr elemento que tiver a class="bnt" ira receber essas configs */
+.bnt-hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(201,162,75,.5)}
+/* aqui é a animação do botão, quando o mouse passa por cima, ele sobe 2px e a sombra aumenta */
+.bnt:active{transform:translateY(1px)}
+.bnt-vinho{background:linear-gradient(180deg,#A12F3F, var(--vinho));border-color:#4D1219;color:#fff;box-shadow:0 4px 14px rgba(122,31,43,.4);}
+.bnt-contorno{background:transparent;color:var(--dourado);border-color:var(--dourado);box-shadow:none}
+.bnt-pequeno{min-height:38px;padding:0 16px;font-size:.9rem}
+.bnt-icone{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;border:1px solid var(--borda);background:var(--superficie);color:var(--texto);cursor:pointer;font-size:1.1rem}
+.bnt-icone svg{width:20px;height:20px;}
+.bnt-icone:hover{border-color:var(--dourado)}
+
+/* Topo: Logo, links, tema e botão de usuário */
+.topo{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:14px;padding:10px 24px;background:var(--fundo);border-bottom:1px solid var(--borda)}
+.topo-esquerda{display:flex;align-items:center;gap:28px}
+.logo{display:flex;align-items:center;gap:8px;font:700 1.1rem 'Playfair Display', Georgia, serif;color:var(--dourado);text-decoration:none}
+.logo svg{width:30px;height:30px}
+.topo-links{display:none;gap:22px}
+.topo-links a{color:var(--texto);text-decoration:none;font-size:.95rem;padding: 6px 0;border-bottom:2px solid transparent}
+.topo-links a:hover,.topo-links a[aria-current="page"]{border-color:var(--dourado)}
+@media(min-width: 768px){.topo-links{display:flex}}
+.acoes{display:flex;gap:10px;align-items:center}
+

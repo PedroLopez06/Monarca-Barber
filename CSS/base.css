@@ -1,0 +1,37 @@
+/* ===== Base.css -> cores, reset, textos e formulários ===== */
+
+/* Cores do tema escuro (Padrão). */
+:root{
+  --fundo:#0C0C0D; --fundo2: #232326; --superficie: #18181A; --texto: #F2EDE4; --texto-suave: #A9A398;
+  --dourado:#C9A24B; --dourado-escuro: #8E5F26; --vinho: #7A1F2B; --verde: #1F7A4D;
+  --borda: rgba(255,255,255,.12); --sombra:0 6px 18px rgba(0,0,0,.45);
+}
+/* Cores do tema claro. */
+[data-theme="light"]{
+  --fundo:#FAF7F0; --fundo2:#EFE9DA; --superficie:#FFFFFF; --texto:#1C1C1E; --texto-suave:#5A5348;
+  --dourado:#A8801F; --dourado-escuro:#6F5413; --borda:rgba(0,0,0,.14); --sombra:.0 6px 18px rgba(0,0,0,.14);
+}
+
+/* Reset: tira as margens padrão do navegador e define box-sizing para border-box */
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth} /* deixa mais suave na hora de rolar a tela */
+body{font-family:Inter, system-ui, sans-serif; background:var(--fundo); color:var(--texto); line-height:1.6; padding-bottom:96px; transition:background .3s, color .3s;} 
+/* Plano A, B e C de fontes, cor de fundo, cor da letra, a altura de cada linha, barra de baixo não cobrir o final da página e fazer a troca de cor ser suave */
+
+/* Textos */
+h1, h2, h3{font-family: 'Playfair display', Georgia, serif; line-height:1.25} /* aqui eu tô basicamente dizendo como cada um deve ser exibido: como por exemplo a fonte, o tamanho, a proporção máxima, etc */
+h1{font-size:1.9rem}
+h2{font-size:1.4rem;margin-bottom:14px}
+h3{font: size 1.05rem;}
+a{color:var(--dourado)}
+img{max-width:100%; display:block}
+.suave{color:var(--texto-suave)}
+.centro{text-align:center}
+:focus-visible{outline:3px solid var(--dourado); outline-offset:2px}
+
+/* Formulários */
+label{display:block; text-align:left; font-weight: 600; margin:14px 0 6px} /* Aqui serve para estilizar as etiquetas dos campos de formulário: usei o block para ocupar a linha inteira, alinho o texto à esquerda, adicionei um "semi-negrito" e os 3 últimos atalhos servem para adicionar espaçamentos */
+input{width: 100%; min-height: 46px; padding:0 14px; border-radius: 10px; border: 2px solid var(--borda); background:var(--fundo); color:var(--texto); font: inherit} /* Aqui eu tô estilizando todos os campos de digitar do site: 
+Coloquei para o campo ocupar toda a largura da caixa onde está, a altura mínima, o espaço interno (entre a borda e o texto digitado), arredondar os cantos, a borda, a cor dentro do campo, a cor do texto e mandei o campo copiar a fonte, o tamanho e o peso do elemento onde ele está para ficar igual ao resto do site. */
+.erro{display:block; text-align: left; color:#ff7b7b; font-size:.85rem; min-height:1.2em; margin-top: 4px} /* Isso dq serve basicamente para configurar a mensagem de erro quando você coloca um email ou senha inválidos e conversa diretamente com o login.js e o login.html*/
+[data-theme="light"] .erro{color:#b3261e} /* e por final, só pra mudar a cor do erro dependendo de qual tema estiver ativo */

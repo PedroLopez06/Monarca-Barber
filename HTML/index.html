@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <link rel="icon" href="../IMG/logo.svg"> <!-- isso serve para deixar a logo da barbearia em amostra na aba-->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/base.css">
+    <link rel="stylesheet" href="../CSS/componentes.css">
+    <link rel="stylesheet" href="../CSS/paginas.css">
+    <script src="../JAVASCRIPT/tema.js"></script>
+    <title> Monarca Barber</title>
+    <meta name="description" content="Agende seu corte no Monarca Barber: experiência de barbearia premium com profissionais especializados.">
+</head>
+<body data-pagina="inicio">
+    <main class="pagina">
+
+    <!-- Coluna Principal-->    
+    <div>
+        <div class="cabecalho-loja">
+            <div class="logo-redondo"><svg viewBox="0 0 24 24" fill="currenteColor" aria-hidden="true"><path d="M3 18h18l1-10-5 4-5-8-5 8-5-4z"/></svg></div> <!-- Imagem da coroa da loja em SVG-->
+            <div>
+                <h1> Monarca Barber</h1>
+                <div id="nota-media"></div>
+            </div>
+            <a class="bnt" id="bnt-agendar" href="login.html">Agendar agora</a>
+        </div>
+        <span class="selo" id="selo"></span> <!-- isso dq é toda aquela coluna principal que aparece na página inicial, com o nome, foto, avaliação da barbearia e botão de agendar-->
+
+        <!-- Fotos da tela inicial-->
+        <div class="galeria-topo" id="galeria-topo"></div>
+
+
+        <!-- 4 abas/painéis: Serviços, Profissionais, Avaliações e sobre que aparecem logo abaixo das fotos do início-->
+        <div class="abas-loja" role="tablist">
+            <button role="tab" data-aba="servicos" aria-selected="true">Serviços</button>
+            <button role="tab" data-aba="profissionais" aria-selected="false">Profissionais</button>
+            <button role="tab" data-aba="avaliacoes" aria-hidden="false">Avaliações</button>
+            <button role="tab" data-aba="sobre" aria-hidden="false">Sobre</button>
+        </div>
+        <!-- Só vai aparecer uma por vez-->
+        <section class="painel" id="painel-servicos">
+            <div class="filtros">
+                <button class="ativo" data-cat="todos">Todos</button><button data-cat="navalhado">Navalhado</button>
+                <button data-cat="social">Social</button><button data-cat="barba">Barba</button>
+            </div>
+        </section>
+
+        <section class="painel" id="painel-profissionais" hidden>
+            <div id="lista-profissionais"></div>
+        </section>
+
+        <section class="painel" id="painel-avaliacoes" hidden>
+            <div class="resumo-notas" id="resumo-notas"></div>
+            <p class="suave centro">Apenas clientes com atendimentos concluídos podem avaliar, em <a href="agendamentos.html">Agendamentos</a>.</p>
+            <div id="lista-avaliacoes"></div>
+        </section>
+
+        <section class="painel" id="painel-sobre" hidden>
+            <h2>Sobre a barbearia</h2>
+            <p>A Monarca Barber nasceu da vontade de tratar cada cliente como realeza: corte bem feito, ambiente de respeito e horário cumprido. Aqui o tempo do cliente vale tanto quanto o barbeiro.</p>
+            <div class="numeros">
+                <div><strong data-alvo="8">0</strong>anos de mercado</div>
+                <div><strong data-alvo="3500">0</strong>clientes atendidos</div>
+                <div><strong data-alvo="12000">0</strong>cortes realizados</div>
+            </div>
+            <h2>Jonas Nobre, dono e barbeiro</h2>
+            <p style="margin-bottom:14px">Curso profissionalizante de Barbeiro, especialização em cortes navalhados, sociais, visagismo e mais de 8 anos de experiência.</p>
+            <ul class="trajetoria">
+                <li><strong>2018</strong> Curso de barbeiro</li><li><strong>2020</strong> cortes navalhados</li>
+                <li><strong>2022</strong> Visagismo e Social</li><li><strong>2024</strong> Abre a Monarca Barber</li>
+            </ul>
+        </section>
+    </div>
+
+    <!-- Cartão Lateral da tela inicial, com a localização, contatos, formas de pagamentos, etc-->
+    <aside class="lateral">
+        <section>
+            <h2>Localização</h2>
+            <div class="endereco">
+                <span id="texto-endereco"></span>
+                <a class="seta-maps" id="link-maps" target="_blank" rel="noopener noferrer" aria-label="Abrir o endereço da barbearia no Google Maps">
+                    <svg 
+                </a>
+            </div>
+        </section>
+
+    </aside>
+
+</body>
+</html>

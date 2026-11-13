@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../IMG/logo.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/base.css">
+    <link rel="stylesheet" href="../CSS/componentes.css">
+    <link rel="stylesheet" href="../CSS/paginas.css">
+    <script src="../JAVASCRIPT/tema.js"></script>
+    <title>Meus Agendamentos | Monarca Barber</title>
+    <meta name="description" content="Confirme e acompanhe seus agendamentos na Monarca Barber.">
+</head>
+<body data-pagina="agendamentos" data-protegida="1">
+    <main class="coluna">
+        <h1>Meus Agendamentos</h1>
+        <div class="numeros" id="resumo-topo"></div>
+
+        <div class="abas-lojas" role="tablist">
+            <button role="tab" data-aba="confirmar" aria-controls="true">Confirmar <span class="contador" id="contador-confirmar">0</span></button>
+            <button role="tab" data-aba="concluidos" aria-controls="true">Concluídos <span class="contador" id="contador-concluidos">0</span></button>
+            <button role="tab" data-aba="cancelados" aria-controls="true">Cancelados <span class="contador" id="contador-cancelados">0</span></button>
+        </div>
+        <section id="painel-confirmar"></section>
+        <section id="painel-concluidos" hidden></section>
+    </main>
+    <script src="../JAVASCRIPT/armazenamento.js"></script>
+    <script src="../JAVASCRIPT/dados.js"></script>
+    <script src="../JAVASCRIPT/auth.js"></script>
+    <script src="../JAVASCRIPT/topo.js"></script>
+    <script src="../JAVASCRIPT/nav.js"></script>
+    <script src="../JAVASCRIPT/agendamentos.js"></script>
+</body>
+</html>
