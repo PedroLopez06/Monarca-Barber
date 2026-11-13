@@ -18,7 +18,7 @@
     <!-- Coluna Principal-->    
     <div>
         <div class="cabecalho-loja">
-            <div class="logo-redondo"><svg viewBox="0 0 24 24" fill="currenteColor" aria-hidden="true"><path d="M3 18h18l1-10-5 4-5-8-5 8-5-4z"/></svg></div> <!-- Imagem da coroa da loja em SVG-->
+            <div class="logo-redondo"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 18h18l1-10-5 4-5-8-5 8-5-4z"/></svg></div> <!-- Imagem da coroa da loja em SVG-->
             <div>
                 <h1> Monarca Barber</h1>
                 <div id="nota-media"></div>
@@ -80,12 +80,37 @@
             <div class="endereco">
                 <span id="texto-endereco"></span>
                 <a class="seta-maps" id="link-maps" target="_blank" rel="noopener noferrer" aria-label="Abrir o endereço da barbearia no Google Maps">
-                    <svg 
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 11l18-8-8 18-2-8z"/></svg>
                 </a>
             </div>
         </section>
-
+        <section><h2>Horário de atendimento</h2><div id="lista-horarios"></div></section>
+        <section>
+            <h2>Contato</h2>
+            <div class="contatos">
+                <a class="bnt bnt-pequeno" id="link-whats" target="_blank" rel="noopener noferrer">WhatsApp</a>
+                <a class="bnt bnt-vinho bnt-pequeno" id="link-insta" target="_blank" rel="noopener noferrer">Instagram</a>
+            </div>
+        </section>
+        <section><h2>Formas de pagamento</h2><div class="chips" id="lista-pagamentos"></div></section>
     </aside>
+    </main>
 
+    <footer class="rodape">
+        <div class="logo"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 18h18l1-10-5 4-5-8-5 8-5-4z"/></svg>Monarca Barber</div>
+        <p class="suave">R. Monsenhor José Coutinho, 469, Centro, Itapororoca - PB</p>
+        <p class="suave"><small>Creditos da imagem: Google Maps</small></p>
+    </footer>
+
+    <div class="lightBox" id="lightBox" role="dialog" aria-label="Foto Ampliada">
+        <button class="ant" aria-label="Foto anterior"></button><div class="foto-box"></div><button class="prox" aria-label="Próxima foto"></button>
+    </div>
+
+    <script src="../JAVASCRIPT/armazenamento.js"></script>]
+    <script src="../JAVASCRIPT/dados.js"></script>
+    <script src="../JAVASCRIPT/auth.js"></script>
+    <script src="../JAVASCRIPT/topo.js"></script>
+    <script src="../JAVASCRIPT/nav.js"></script>
+    <script src="../JAVASCRIPT/home.js"></script>
 </body>
 </html>
