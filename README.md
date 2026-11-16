@@ -94,23 +94,3 @@ Não há banco de dados nem servidor: tudo fica no **localStorage** do navegador
 | `monarca_theme` | tema escolhido (claro ou escuro) |
 | `monarca_seeded` | marca de que o histórico de exemplo já foi criado |
 
-Para ver ou apagar: `F12` > aba **Application** > **Local Storage**.
-
-## Como trocar os dados
-
-Quase tudo fica em `JAVASCRIPT/dados.js`:
-
-- **WhatsApp:** `whatsapp` (só números, com `55` e DDD, para o link) e `whatsappTexto` (como aparece na tela). Troque os dois.
-- **Instagram e endereço:** `instagram` (sem o `@`) e `endereco`.
-- **Horário de funcionamento:** `abre`, `fecha`, `almocoInicio`, `almocoFim` e `diasAbertos` (0 = domingo ... 6 = sábado).
-- **Serviços, barbeiros, avaliações e formas de pagamento:** as listas `servicos`, `barbeiros`, `avaliacoes` e `pagamentos`.
-
-O endereço do rodapé está escrito direto no `index.html`: se mudar o endereço, mude lá também.
-
-
-## Limitações
-
-- Como os dados ficam no navegador, **cada navegador e cada aparelho tem a sua própria agenda**. Dois clientes em aparelhos diferentes não veem os horários um do outro. Um sistema de verdade precisaria de servidor e banco de dados compartilhado.
-- O login é uma **simulação**: tudo roda no navegador e pode ser visto e alterado por quem abrir as ferramentas do desenvolvedor. Não é segurança real.
-- O selo de "próximo horário livre" da tela inicial considera só o expediente e o almoço, e não os agendamentos já feitos.
-- Nenhum agendamento muda para "concluído" sozinho: sem o painel do administrador, só o usuário de teste tem atendimentos concluídos.
