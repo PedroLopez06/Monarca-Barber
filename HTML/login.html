@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23C9A24B' d='M3 18h18l1-10-5 4-5-8-5 8-5-4z'/%3E%3C/svg%3E">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../CSS/base.css">
+  <link rel="stylesheet" href="../CSS/componentes.css">
+  <link rel="stylesheet" href="../CSS/paginas.css">
+  <script src="../JAVASCRIPT/tema.js"></script>
+  <title>Entrar | Monarca Barber</title>
+  <meta name="description" content="Entre ou cadastre-se para agendar seu horário na Monarca Barber.">
+</head>
+<body data-login="1">
+  <main class="caixa">
+    <h1>Bem-vindo</h1>
+    <p class="suave">Entre ou crie sua conta para agendar.</p>
+    <div class="abas" role="tablist">
+      <button type="button" role="tab" data-aba="entrar" aria-selected="true">Entrar</button>
+      <button type="button" role="tab" data-aba="cadastrar" aria-selected="false">Cadastrar</button>
+    </div>
+
+    <form id="form-entrar" novalidate>
+      <div class="grupo"><label for="e-email">E-mail</label><input id="e-email" type="email" autocomplete="email" required></div>
+      <div class="grupo"><label for="e-senha">Senha</label>
+        <div class="campo-senha"><input id="e-senha" type="password" autocomplete="current-password" required><button class="ver-senha" type="button" aria-label="Mostrar ou ocultar senha">👁</button></div>
+        <span class="erro" id="erro-entrar" role="alert"></span></div>
+      <button class="btn" type="submit">Entrar</button>
+      <p class="suave" style="margin-top:14px"><small>Teste: demo@monarca.com · Demo@123</small></p>
+    </form>
+
+    <form id="form-cadastro" hidden novalidate>
+      <div class="grupo"><label for="c-nome">Nome</label><input id="c-nome" data-regra="nome" autocomplete="name"><span class="erro"></span></div>
+      <div class="grupo"><label for="c-email">E-mail</label><input id="c-email" type="email" data-regra="email" autocomplete="email"><span class="erro"></span></div>
+      <div class="grupo"><label for="c-telefone">Telefone</label><input id="c-telefone" data-regra="telefone" inputmode="numeric" placeholder="(83) 9 9999-9999"><span class="erro"></span></div>
+      <div class="grupo"><label for="c-senha">Senha</label>
+        <div class="campo-senha"><input id="c-senha" type="password" data-regra="senha" autocomplete="new-password"><button class="ver-senha" type="button" aria-label="Mostrar ou ocultar senha">👁</button></div><span class="erro"></span></div>
+      <div class="grupo"><label for="c-confirma">Confirmar senha</label>
+        <div class="campo-senha"><input id="c-confirma" type="password" data-regra="confirma" autocomplete="new-password"><button class="ver-senha" type="button" aria-label="Mostrar ou ocultar senha">👁</button></div><span class="erro"></span></div>
+      <button class="btn" type="submit">Criar conta</button>
+    </form>
+    <p style="margin-top:18px"><a href="index.html">← Voltar ao início</a></p>
+  </main>
+  <script src="../JAVASCRIPT/armazenamento.js"></script>
+  <script src="../JAVASCRIPT/auth.js"></script>
+  <script src="../JAVASCRIPT/topo.js"></script>
+  <script src="../JAVASCRIPT/login.js"></script>
+</body>
+</html>

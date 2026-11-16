@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23C9A24B' d='M3 18h18l1-10-5 4-5-8-5 8-5-4z'/%3E%3C/svg%3E">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/base.css">
+    <link rel="stylesheet" href="../CSS/componentes.css">
+    <link rel="stylesheet" href="../CSS/paginas.css">
+    <script src="../JAVASCRIPT/tema.js"></script>
+    <title>Agendar Horário | Monarca Barber</title>
+    <meta name="description" content="Escolha serviço, barbeiro, data e horário na nossa barbearia.">
+</head>
+<body data-pagina="agendamentos" data-pagina="1">
+    <main class="coluna">
+        <h1>Agendar Horário</h1>
+        <p class="suave">Só aparecem horários livres.</p>
+
+        <section class="passo"><h2><span>1</span>Serviços</h2><div id="lista-servicos"></div></section>
+        <section class="passo"><h2><span>2</span>Barbeiro</h2><div id="lista-barbeiros"></div></section>
+        <section class="passo"><h2><span>3</span>Data</h2>
+            <label for="data" class="suave" style="margin-top:0">Terça a sábado, nos próximos 30 dias</label>
+            <input type="date" id="data">
+        </section>
+        <section class="passo"><h2><span>4</span>Horário</h2><div class="horarios" id="lista-horarios"></div></section>
+
+        <section class="resumo-agendar">
+            <h2>Resumo</h2>
+            <div id="resumo"></div>
+            <button class="btn" id="btn-confirmar" type="button" disabled>Confirmar Agendamento</button>
+        </section>
+    </main>
+    <script src="../JAVASCRIPT/armazenamento.js"></script>
+    <script src="../JAVASCRIPT/dados.js"></script>
+    <script src="../JAVASCRIPT/auth.js"></script>
+    <script src="../JAVASCRIPT/topo.js"></script>
+    <script src="../JAVASCRIPT/nav.js"></script>
+    <script src="../JAVASCRIPT/agenda.js"></script>
+    <script src="../JAVASCRIPT/agendar.js"></script>
+</body>
+</html>

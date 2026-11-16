@@ -1,0 +1,106 @@
+/* ===== PÁGINAS: estilos de cada tela ===== */
+
+/* INÍCIO: duas colunas no computador (conteúdo + cartão lateral), uma coluna no celular */
+.pagina{display:grid;gap:28px;max-width:1100px;margin:0 auto;padding:28px 20px}
+@media(min-width:900px){.pagina{grid-template-columns:minmax(0,2fr) minmax(0,1fr);align-items:start}}
+
+/* Cabeçalho da barbearia: logo redonda, nome, nota e botão de agendar */
+.cabecalho-loja{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:20px}
+.logo-redondo{display:grid;place-items:center;width:58px;height:58px;border-radius:50%;border:3px solid var(--dourado);background:var(--superficie);color:var(--dourado)}
+.logo-redondo svg{width:30px;height:30px}
+.cabecalho-loja .btn{margin-left:auto}
+.selo{display:inline-block;margin-bottom:18px;padding:6px 16px;border-radius:20px;background:var(--fundo2);border:1px solid var(--dourado);color:var(--dourado);font-size:.9rem;font-weight:600}
+
+/* Galeria de cima: 1 foto grande à esquerda e 2 menores à direita */
+.galeria-topo{display:grid;grid-template-columns:2fr 1fr;grid-template-rows:1fr 1fr;gap:10px;height:clamp(240px,42vw,440px);margin-bottom:24px}
+.galeria-topo button{padding:0;border:0;background:none;cursor:pointer}
+.galeria-topo button:first-child{grid-row:span 2}
+.galeria-topo .foto-box{height:100%;aspect-ratio:auto}
+.mais-fotos{position:absolute;inset:0;display:grid;place-items:center;background:rgba(0,0,0,.55);color:#fff;font-weight:700}
+
+/* Abas (Serviços, Profissionais...) com sublinhado dourado na aba ativa */
+.abas-loja{display:flex;gap:24px;border-bottom:1px solid var(--borda);margin-bottom:20px;overflow-x:auto}
+.abas-loja button{padding:12px 0;border:0;border-bottom:3px solid transparent;background:none;color:var(--texto-suave);font:inherit;font-weight:600;cursor:pointer;white-space:nowrap}
+.abas-loja button[aria-selected="true"]{color:var(--texto);border-color:var(--dourado)}
+.filtros{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:6px}
+.filtros button{min-height:40px;padding:0 18px;border-radius:25px;border:1px solid var(--borda);background:var(--superficie);color:var(--texto);font:inherit;cursor:pointer;transition:background .2s}
+.filtros button:hover{border-color:var(--dourado)}
+.filtros button.ativo{background:var(--dourado);border-color:var(--dourado);color:#1A1306;font-weight:600}
+
+/* Linhas de serviço, profissional e avaliação */
+.linha{display:flex;align-items:center;gap:14px;margin-top:12px;padding:14px;background:var(--superficie);border:1px solid var(--borda);border-radius:14px}
+.linha .foto-box{width:72px;aspect-ratio:1;flex-shrink:0;border-radius:12px}
+.linha .info{flex:1}
+.linha .preco{color:var(--dourado);font-weight:700}
+.linha.redonda .foto-box{border-radius:50%}
+.avaliacao{display:block}
+.resumo-notas{text-align:center;margin-bottom:10px}
+.resumo-notas strong{font:700 3rem 'Playfair Display',serif;color:var(--dourado)}
+.barra-nota{display:flex;align-items:center;gap:8px;max-width:300px;margin:4px auto}
+.barra-nota div{flex:1;height:8px;border-radius:4px;background:var(--fundo2);overflow:hidden}
+.barra-nota i{display:block;height:100%;background:var(--dourado)}
+.numeros{display:flex;gap:12px;flex-wrap:wrap;margin:18px 0}
+.numeros div{flex:1;min-width:120px;padding:14px;text-align:center;background:var(--superficie);border:1px solid var(--borda);border-radius:14px}
+.numeros strong{display:block;font:700 1.8rem 'Playfair Display',serif;color:var(--dourado)}
+.trajetoria{display:flex;flex-wrap:wrap;gap:10px;list-style:none}
+.trajetoria li{padding:8px 16px;border-radius:20px;background:var(--fundo2)}
+
+/* Cartão lateral: localização, horários, contato e pagamento */
+.lateral{padding:24px;background:var(--superficie);border:1px solid var(--borda);border-radius:24px}
+.lateral section{padding:20px 0;border-top:1px solid var(--borda)}
+.lateral section:first-child{padding-top:0;border-top:0}
+.lateral h2{font-size:1.05rem;margin-bottom:12px}
+.endereco{display:flex;align-items:center;justify-content:space-between;gap:14px;font-size:.92rem}
+.seta-maps{flex-shrink:0;display:grid;place-items:center;width:46px;height:46px;border-radius:50%;border:2px solid var(--texto);background:var(--texto);color:var(--fundo)}
+.seta-maps svg{width:22px;height:22px}
+.dia{display:flex;justify-content:space-between;align-items:center;padding:6px 0;font-size:.92rem;color:var(--texto-suave)}
+.dia.hoje{color:var(--texto);font-weight:600}
+.badge-hoje{margin-left:8px;padding:2px 10px;border-radius:12px;background:var(--verde);color:#fff;font-size:.75rem}
+.contatos{display:grid;gap:10px}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+
+/* Rodapé e galeria ampliada (lightbox) */
+.rodape{padding:32px 20px;text-align:center;border-top:1px solid var(--borda);font-size:.9rem}
+.rodape .logo{justify-content:center}
+.lightbox{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;gap:8px;padding:16px;background:rgba(0,0,0,.88)}
+.lightbox.aberto{display:flex}
+.lightbox .foto-box{max-width:min(640px,80vw)}
+.lightbox button{width:46px;height:46px;border-radius:50%;border:1px solid var(--dourado);background:var(--superficie);color:var(--dourado);font-size:1.6rem;cursor:pointer}
+
+/* LOGIN e telas em construção: caixa centralizada */
+.caixa,.vazio{max-width:440px;margin:36px auto;padding:26px 22px;text-align:center;background:var(--superficie);border:1px solid var(--borda);border-radius:20px;box-shadow:var(--sombra)}
+.abas{display:flex;gap:8px;margin:18px 0}
+.abas button{flex:1;min-height:46px;border-radius:12px;border:2px solid var(--dourado);background:transparent;color:var(--dourado);font:inherit;font-weight:700;cursor:pointer}
+.abas button[aria-selected="true"]{background:var(--dourado);color:#1A1306}
+.campo-senha{position:relative}
+.campo-senha .ver-senha{position:absolute;right:6px;top:3px;width:40px;height:40px;border:0;background:none;color:var(--dourado);cursor:pointer;font-size:1.1rem}
+form .btn{width:100%;margin-top:18px}
+
+/* AGENDAR e AGENDAMENTOS: coluna central estreita */
+.coluna{max-width:760px;margin:0 auto;padding:28px 20px}
+.coluna h1{margin-bottom:6px}
+.passo{margin-top:28px}
+.passo h2{display:flex;align-items:center;gap:10px}
+.passo h2 span{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--dourado);color:#1A1306;font:700 .95rem Inter,sans-serif}
+
+/* Opções clicáveis (serviço e barbeiro): a selecionada ganha borda e fundo dourados */
+.opcao{width:100%;font:inherit;color:var(--texto);text-align:left;cursor:pointer;transition:border-color .2s}
+.opcao:hover{border-color:var(--dourado)}
+.opcao.selecionado,.horario.selecionado{border-color:var(--dourado);background:rgba(201,162,75,.18)}
+.opcao.selecionado .info strong::after{content:" ✓";color:var(--dourado)}
+
+/* Grade de horários: os indisponíveis ficam apagados e riscados */
+.horarios{display:grid;grid-template-columns:repeat(auto-fill,minmax(84px,1fr));gap:10px}
+.horario{min-height:44px;border-radius:10px;border:1px solid var(--borda);background:var(--superficie);color:var(--texto);font:inherit;cursor:pointer}
+.horario:hover:not(:disabled){border-color:var(--dourado)}
+.horario:disabled{opacity:.4;text-decoration:line-through;cursor:not-allowed}
+.horarios p{grid-column:1/-1}
+.resumo-agendar{margin-top:28px;padding:18px;background:var(--superficie);border:1px solid var(--dourado);border-radius:16px}
+.resumo-agendar .btn{width:100%;margin-top:14px}
+.btn:disabled{opacity:.45;cursor:not-allowed;transform:none;box-shadow:none}
+
+/* Cartões da tela de agendamentos */
+.cartao{margin-top:14px;padding:16px;background:var(--superficie);border:1px solid var(--borda);border-left:5px solid var(--dourado);border-radius:14px}
+.topo-cartao{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:6px;text-transform:capitalize}
+.acoes-cartao{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+.contador{display:inline-block;min-width:22px;margin-left:6px;padding:0 7px;border-radius:12px;background:var(--fundo2);color:var(--texto);font-size:.8rem}

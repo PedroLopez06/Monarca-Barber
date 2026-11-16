@@ -23,13 +23,12 @@
                 <h1> Monarca Barber</h1>
                 <div id="nota-media"></div>
             </div>
-            <a class="bnt" id="bnt-agendar" href="login.html">Agendar agora</a>
+            <a class="btn" id="btn-agendar" href="login.html">Agendar agora</a>
         </div>
         <span class="selo" id="selo"></span> <!-- isso dq é toda aquela coluna principal que aparece na página inicial, com o nome, foto, avaliação da barbearia e botão de agendar-->
 
         <!-- Fotos da tela inicial-->
         <div class="galeria-topo" id="galeria-topo"></div>
-
 
         <!-- 4 abas/painéis: Serviços, Profissionais, Avaliações e sobre que aparecem logo abaixo das fotos do início-->
         <div class="abas-loja" role="tablist">
@@ -44,6 +43,7 @@
                 <button class="ativo" data-cat="todos">Todos</button><button data-cat="navalhado">Navalhado</button>
                 <button data-cat="social">Social</button><button data-cat="barba">Barba</button>
             </div>
+            <div id="lista-servicos"></div>
         </section>
 
         <section class="painel" id="painel-profissionais" hidden>
@@ -58,7 +58,7 @@
 
         <section class="painel" id="painel-sobre" hidden>
             <h2>Sobre a barbearia</h2>
-            <p>A Monarca Barber nasceu da vontade de tratar cada cliente como realeza: corte bem feito, ambiente de respeito e horário cumprido. Aqui o tempo do cliente vale tanto quanto o barbeiro.</p>
+            <p>A Monarca Barber nasceu da vontade de tratar cada cliente como realeza: corte bem feito, ambiente de respeito e horário cumprido. Aqui o tempo do cliente vale tanto quanto o do barbeiro.</p>
             <div class="numeros">
                 <div><strong data-alvo="8">0</strong>anos de mercado</div>
                 <div><strong data-alvo="3500">0</strong>clientes atendidos</div>
@@ -88,8 +88,8 @@
         <section>
             <h2>Contato</h2>
             <div class="contatos">
-                <a class="bnt bnt-pequeno" id="link-whats" target="_blank" rel="noopener noferrer">WhatsApp</a>
-                <a class="bnt bnt-vinho bnt-pequeno" id="link-insta" target="_blank" rel="noopener noferrer">Instagram</a>
+                <a class="btn btn-pequeno" id="link-whats" target="_blank" rel="noopener noferrer">WhatsApp</a>
+                <a class="btn btn-vinho bnt-pequeno" id="link-insta" target="_blank" rel="noopener noferrer">Instagram</a>
             </div>
         </section>
         <section><h2>Formas de pagamento</h2><div class="chips" id="lista-pagamentos"></div></section>
@@ -97,20 +97,20 @@
     </main>
 
     <footer class="rodape">
-        <div class="logo"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 18h18l1-10-5 4-5-8-5 8-5-4z"/></svg>Monarca Barber</div>
-        <p class="suave">R. Monsenhor José Coutinho, 469, Centro, Itapororoca - PB</p>
-        <p class="suave"><small>Creditos da imagem: Google Maps</small></p>
-    </footer>
+    <div class="logo"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 18h18l1-10-5 4-5-8-5 8-5-4z"/></svg>Monarca Barber</div>
+    <p class="suave">R. Monsenhor José Coutinho, 469, Centro, Itapororoca - PB</p>
+    <p class="suave"><small>A melhor Barbearia de Itapororca!</small></p>
+  </footer>
 
-    <div class="lightBox" id="lightBox" role="dialog" aria-label="Foto Ampliada">
-        <button class="ant" aria-label="Foto anterior"></button><div class="foto-box"></div><button class="prox" aria-label="Próxima foto"></button>
-    </div>
+  <div class="lightbox" id="lightbox" role="dialog" aria-label="Foto ampliada">
+    <button class="ant" aria-label="Foto anterior">‹</button><div class="foto-box"></div><button class="prox" aria-label="Próxima foto">›</button>
+  </div>
 
-    <script src="../JAVASCRIPT/armazenamento.js"></script>]
-    <script src="../JAVASCRIPT/dados.js"></script>
-    <script src="../JAVASCRIPT/auth.js"></script>
-    <script src="../JAVASCRIPT/topo.js"></script>
-    <script src="../JAVASCRIPT/nav.js"></script>
-    <script src="../JAVASCRIPT/home.js"></script>
+  <script src="../JAVASCRIPT/armazenamento.js"></script>
+  <script src="../JAVASCRIPT/dados.js"></script>
+  <script src="../JAVASCRIPT/auth.js"></script>
+  <script src="../JAVASCRIPT/topo.js"></script>
+  <script src="../JAVASCRIPT/nav.js"></script>
+  <script src="../JAVASCRIPT/home.js"></script>
 </body>
 </html>
